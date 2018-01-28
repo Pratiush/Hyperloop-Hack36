@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Company Feedback Form</title>
+  <title>Employee Review</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
   <meta charset="UTF-8"> 
@@ -9,14 +9,16 @@
   <style>
         .well1 {
             background-color: #802BB1;
+
         }
+
   </style>
 
 </head>
 <body>
   <div class="container-fluid">
 
-    <h1 class="text-center text-primary">PeerReview (SEE REVIEWS)</h1>
+    <h1 class="text-center text-primary">trueRecruit (SEE REVIEWS)</h1>
 
   <!-- Account Switcher -->
 
@@ -55,11 +57,17 @@
 
         <label>Employee ID :</label><input type="text" name="employeeid1" id="employeeid1"><br>
         <button class="btn btn-info" onclick="getReview()">SUBMIT</button>
-        <div id="reviews">
-          
-        </div>
-        
-      </div>
+
+        <div class="table-responsive">
+        <table class="table table-bordered">
+        <thead>
+  
+        </thead>
+        <tbody id="reviews">
+        </tbody>
+      </table>
+    </div> 
+    </div>
     </div>
     <div class="col-md-2">
       
@@ -78,5 +86,4 @@
   <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
   <script src="./Review.js"></script>
-
 </html>

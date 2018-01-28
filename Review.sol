@@ -87,7 +87,7 @@ contract People {
     }*/
     
     // feedback by each company
-    function giveFeedback(uint personID,string _joindate,string _resigndate,string _designation,string _branch,string _review)public {
+    function giveFeedback(uint personID,string _joindate,string _resigndate,string _designation,string _branch,string _review) public returns (uint){
         
         feedback temp;
         temp.review=_review;
@@ -98,6 +98,7 @@ contract People {
         peopleList[personID].reviewList[peopleList[personID].counter]=temp;
         peopleList[personID].counter+=1;
         peopleList[personID].ableToCounter=true;
+        return peopleList[personID].counter;
         //string parsedfeed="";
         //string pid=personID;
         //string del;
