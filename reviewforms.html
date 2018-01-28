@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Company Feedback Form</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8"> 
+
+  <style>
+        .well1 {
+            background-color: #802BB1;
+        }
+  </style>
+
+</head>
+<body>
+  <div class="container-fluid">
+
+    <h1 class="text-center text-primary">PeerReview (SEE REVIEWS)</h1>
+
+  <!-- Account Switcher -->
+
+  <div class="row">
+
+   <div class="col-md-2">
+      <h4>Switch Account :</h4>
+   </div>
+   <div class="col-md-2">
+      <input type="text" name="currentAccount" id="currentAccount">
+   </div>
+   <div class="col-md-2">
+      <button class="btn btn-info" onclick="switchAccount()">SWITCH</button>
+   </div>
+   <div class="col-md-2">
+      <h4>Current Account is :</h4><span id="currAcc"></span> 
+   </div>
+   <div class="col-md-2">
+      <button class="btn btn-info" onclick="getCurrentAccount()">CURRENT ACCOUNT</button>
+      
+   </div>
+     
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-2">
+      
+    </div>
+    <!--Form Body here -->
+    <div class="col-md-8">
+
+      <div class="well">
+
+        <h3 class="text-center text-info">Employee Review  </h3>
+
+        <label>Employee ID :</label><input type="text" name="employeeid1" id="employeeid1"><br>
+        <button class="btn btn-info" onclick="getReview()">SUBMIT</button>
+        <div id="reviews">
+          
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-md-2">
+      
+    </div>
+    
+    </div>
+
+
+  </div>
+
+
+  </div>
+</body>
+
+
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="./Review.js"></script>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Company Feedback Form</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8"> 
+
+  <style>
+        .well1 {
+            background-color: #802BB1;
+        }
+  </style>
+
+</head>
+<body>
+  <div class="container-fluid">
+  <h1 class="text-center text-primary">PeerReview (FEEDBACK FORM)</h1>
+
+  <!-- Account Switcher -->
+
+  <div class="row">
+
+   <div class="col-md-2">
+      <h4>Switch Account :</h4>
+   </div>
+   <div class="col-md-2">
+      <input type="text" name="currentAccount" id="currentAccount">
+   </div>
+   <div class="col-md-2">
+      <button class="btn btn-info" onclick="switchAccount()">SWITCH</button>
+   </div>
+   <div class="col-md-2">
+      <h4>Current Account is :</h4><span id="currAcc"></span> 
+   </div>
+   <div class="col-md-2">
+      <button class="btn btn-info" onclick="getCurrentAccount()">CURRENT ACCOUNT</button>
+      
+   </div>
+     
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-8" background-color="green">
+      <!-- Write the code for Feedback Form here.......   -->
+      <div class="well well1">
+
+      <form >
+        <label>Company Unique ID : </label><br>
+        <input type="text" placeholder="" id="companyid"><br>
+        <label>Employee ID :</label><br>
+        <input type="text" placeholder="" id="employeeid"><br><br>
+        <button class="btn btn-info" onclick="check()" id="giveFeed">Give Feedback</button> 
+      </form>
+      <div id="form1">
+      <form id="form-1">
+        <label>From Date :</label><input type="text" name="from_date" id="from_date"><br>
+        <label>To Date :</label><input type="text" name="to_date" id="to_date"><br>
+        <label>Designation :</label><input type="text" name="designation" id="designation"><br>
+        <label>Branch : </label> <input type="text" name="branch" id="branch"><br>
+        <label>Feedback :</label><input type="textarea" name="feedback" id="feedback"><br>
+        <button class="btn btn-info" onclick="giveFeedback()">SUBMIT</button>
+        
+      </form>
+      </div>
+
+
+      </div>
+    </div>
+      <div class="col-md-2">
+        
+      </div>
+
+
+  </div>
+
+  <!--  Form to view feedbacks for an employee -->
+
+  <div class="row">
+    <div class="col-md-2">
+      
+    </div>
+    <!--Form Body here -->
+    <div class="col-md-8">
+
+      <div class="well">
+
+        <h3 class="text-center text-info">Employee Review  </h3>
+
+         <h4 class="text-success"> You can view Reviews for a particular employee by filling out this form </h4>
+
+         <button class="btn btn-block btn-info" onclick="changePage()"> Go checkout employee Review !</button>
+
+        
+      </div>
+    </div >
+    <div class="col-md-2">
+      
+    </div>
+    
+  </div>
+
+
+  </div> i<!-- container fluid ending  -->
+</body>nta
+
+
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="./Review.js"></script>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PeerReview</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8"> 
+
+</head>
+<body class="container-fluid">
+  <h1 class="text-center text-primary">Welcome to PeerReview</h1>
+  <!-- Account Switcher -->
+
+  <div class="row">
+
+   <div class="col-md-2">
+      <h4>Switch Account :</h4>
+   </div>
+   <div class="col-md-2">
+      <input type="text" name="currentAccount" id="currentAccount">
+   </div>
+   <div class="col-md-2">
+      <button class="btn btn-info" onclick="switchAccount()">SWITCH</button>
+   </div>
+   <div class="col-md-2">
+      <h4>Current Account is :</h4><span id="currAcc"></span> 
+   </div>
+   <div class="col-md-2">
+      <button class="btn btn-info" onclick="getCurrentAccount()">CURRENT ACCOUNT</button>
+      
+   </div>
+     
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6" id="left-block">
+      <div class="well">
+        <h3 class="text-center text-info">COMPANY REGISTRATION </h3>
+        <form>
+          <label> Company Name :</label><br>
+          <input type="text" placeholder="Company Name" id="company_name"><br>
+          <label> Company Branch(Unique Id......) :</label><br>
+          <input type="text" placeholder="Company Branch" id="company_branch"><br>
+          <label> Company Email(Unique Id......) :</label><br>
+          <input type="text" placeholder="Company Email" id="company_email"><br><br>
+          <button type="submit" class="btn btn-success" onclick="addCompany()">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6" id="right-block">
+      <div class="well">
+        <h3 class="text-center text-info">EMPLOYEE REGISTRATION (COLLEGE )</h3>
+
+        <form>
+          <label> Employee Name :</label><br>
+          <input type="text" placeholder="Employee Name" id="employee_name"><br>
+          <label> Employee Age (Unique Id......) :</label><br>
+          <input type="text" placeholder="Employee Age" id="employee_age"><br><br>
+          <button type="submit" class="btn btn-info" onclick="addEmployee()">SUBMIT</button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-6" id="left-block-1">
+      <div class="well">
+        <h3 class="text-center text-info">COMPANY LIST (ADMIN Verification)</h3>
+      <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th>Email</th>
+            <th>Verify</th>
+          </tr>
+        </thead>
+        <tbody id="CompanyTable">
+        </tbody>
+      </table>
+    </div>
+    
+    
+      </div>
+    </div>
+
+    <!--Table of employee  -->
+
+    <div class="col-md-6" id="right-block-1">
+      <div class="well">
+        <h3 class="text-center text-info">EMPLOYEE LIST</h3>
+      <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody id="EmployeeTable">
+        </tbody>
+      </table>
+    </div>
+    </div>
+    </div>
+  </div>
+  
+</body>
+
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="./Review.js"></script>
+
+</html>
